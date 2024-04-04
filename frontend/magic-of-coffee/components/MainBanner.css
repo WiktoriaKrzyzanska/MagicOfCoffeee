@@ -1,0 +1,25 @@
+.main-banner {
+    color: white;
+    text-align: center;
+    background-image: url('/images/coffee-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 50px;
+}
+
+.main-banner h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+.main-banner h2 {
+    font-size: 6em;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5em;
+}
+
+.main-banner p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 20px auto;
+}
