@@ -1,0 +1,65 @@
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .brand-section p {
+    width: 10rem;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+  .brand-section .social-media {
+    margin-top: 1rem;
+    display: flex; 
+    align-items: center;  
+  }
+  
+  .brand-section .social-media a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem; 
+  }
+  
+  .links-section {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .links-column {
+    margin: 0 4rem; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .links-column h4 {
+    margin-top: 0;
+    color: #f8b400;
+  }
+  
+  .links-column a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin: 0.3rem 0;
+  }
+  
+  .links-column a:hover {
+    color: white;
+  }
+  
+  .contact-section p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
