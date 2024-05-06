@@ -1,0 +1,28 @@
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#29190e;
+    color: white;
+  }
+  
+  .image-right .text-block {
+    order: 2;
+  }
+  
+  .image-block {
+    flex: 1;
+    padding: 10px;
+  
+  }
+  
+  .text-block {
+    flex: 1;
+    padding: 10px;
+  }
+
+  
+  .info-section h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
