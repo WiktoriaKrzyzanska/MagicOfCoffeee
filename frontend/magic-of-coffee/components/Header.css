@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+color: white;
+    padding: 20px 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.nav, .auth {
+    display: flex;
+}
+.nav a, .auth a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.nav a:hover, .auth a:hover {
+    border-bottom: 2px solid white;
+padding-bottom: 3px;
+}
+.auth-link {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.signup {
+    background-color: #d1a654;
+color: black;
+font-weight: bold;
+}
+.signup:hover {
+    background-color: #b98c3f;
+}
