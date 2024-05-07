@@ -1,0 +1,46 @@
+.info-panel {
+    background-color: #000; 
+    color: #fff;
+    font-family: 'Arial', sans-serif; 
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%;
+  }
+  
+  .info-panel h1, .info-panel h2 {
+    color: #f9d342; 
+  }
+  
+  .info-panel p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .info-block {
+    background-color: #000; 
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .info-panel .info-block {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+.select-country {
+  text-align: center; 
+  padding: 30px; 
+  font-size: 20px; 
+  color: #f9d342; 
+  font-weight: bold; 
+  border: 2px dashed #f9d342; 
+  height: 100%;
+  background-color: black;
+  border-radius: 10px; 
+}
+
+.select-country:hover {
+  background-color: #444;
+  cursor: pointer; 
+}
+  
