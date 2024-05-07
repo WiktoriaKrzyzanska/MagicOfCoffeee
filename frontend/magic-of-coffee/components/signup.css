@@ -1,0 +1,123 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+.text{
+    color: #d1a654;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline{
+    width: 180px;
+    height: 6px;
+    background: #d1a654;
+    border-radius: 9px;
+}
+.inputs2 {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    gap: 25px;
+}
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center; 
+    gap: 25px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 80px;
+    background-color: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img{
+    margin: 0px 30px;
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border:none;
+    outline:none;
+    color: #797979;
+    font-size: 19px;
+}
+
+
+.submit-container{
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.submit{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #d1a654;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.terms-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.terms-container label {
+    margin-left: 10px;
+}
+.error {
+    color: red;
+    font-size: 14px;
+
+}
+/* signup.css */
+.facebook-login-button {
+    background-color: #4267B2; /* Kolor tła Facebook */
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5vh;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 19px;
+    cursor: pointer;
+}
