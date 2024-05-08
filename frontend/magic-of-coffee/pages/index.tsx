@@ -4,6 +4,7 @@ import MainBanner from '../components/MainBanner';
 import Header from "@/components/Header";
 import Footer from '@/components/Footer';
 import MyPage from '@/pages/map';
+import CookiesConsent from '@/components/CookiesConsent';
 
 const Page: React.FC = () => (
     <Layout>
@@ -11,6 +12,7 @@ const Page: React.FC = () => (
         <MainBanner />
         <MyPage/>
         <Footer/>
+        <CookiesConsent/>
     </Layout>
 );
 

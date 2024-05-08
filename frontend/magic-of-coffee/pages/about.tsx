@@ -3,6 +3,7 @@ import Layout from '../app/layout';
 import Header from "@/components/Header";
 import InfoSection from '@/components/InfoSection';
 import Footer from '@/components/Footer';
+import CookiesConsent from '@/components/CookiesConsent';
 
 
 const About: React.FC = () => (
@@ -23,6 +24,7 @@ const About: React.FC = () => (
             />
         </div>
         <Footer/>
+        <CookiesConsent/>
     </Layout>
 );
 
