@@ -1,0 +1,47 @@
+.accordion {
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+  }
+  
+  .accordion-header {
+    background-color: #e9ecef;
+    padding: 1rem 1.25rem;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .accordion-header:hover {
+    background-color: #dfe3e6;
+  }
+  
+  .accordion-body {
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .accordion-item {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    z-index: 3;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: #095484;
+    background-color: #e9ecef;
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  }
+  

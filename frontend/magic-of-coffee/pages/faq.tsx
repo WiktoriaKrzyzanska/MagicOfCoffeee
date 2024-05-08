@@ -1,19 +1,18 @@
 import React from 'react';
 import Layout from '../app/layout';
-import MainBanner from '../components/MainBanner';
 import Header from "@/components/Header";
+import '../components/Contact.css'
 import Footer from '@/components/Footer';
-import MyPage from '@/pages/myMap';
 import CookiesConsent from '@/components/CookiesConsent';
+import FAQ from '@/components/Accordion';
 
-const Page: React.FC = () => (
+const HelpPage: React.FC = () => (
     <Layout>
         <Header />
-        <MainBanner />
-        <MyPage/>
-        <Footer/>
+        <FAQ/>
+        <Footer />
         <CookiesConsent/>
     </Layout>
 );
 
-export default Page;
+export default HelpPage;
