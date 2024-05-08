@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import './Footer.css'
+
 const Footer:React.FC = () => (
   <footer className="footer">
     <div className="footer-content">
@@ -26,7 +27,7 @@ const Footer:React.FC = () => (
         </div>
         <div className="links-column">
           <h4>Company</h4>
-          <Link href="/how-we-work">Privacy Policy</Link>
+          <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of service</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/faq">FAQ</Link>
