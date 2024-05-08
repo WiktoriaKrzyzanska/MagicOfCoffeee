@@ -1,0 +1,28 @@
+.learning-options-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+.learning-option-button {
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: 1px solid;
+    margin: 3px;
+    background-color: #f8b400; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;             
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learning-option-button:hover {
+    background-color: #e6a000; 
+}
+
+.learning-option-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(248,180,0,0.5); 
+}
