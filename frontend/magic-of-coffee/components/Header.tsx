@@ -13,8 +13,8 @@ const Header: React.FC = () => (
             <Link href="/contact">Contact Us</Link>
         </nav>
         <div className="auth">
-            <Link href="/signin" className="auth-link">Sign In</Link>
-            <Link href="/signup" className="auth-link signup">Sign Up</Link>
+            <Link href="/login" className="auth-link">Sign In</Link>
+            <Link href="/register" className="auth-link signup">Sign Up</Link>
         </div>
     </div>
 );
