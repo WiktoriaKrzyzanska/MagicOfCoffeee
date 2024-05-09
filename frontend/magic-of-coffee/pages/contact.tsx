@@ -34,3 +34,10 @@ const ContactUs: React.FC = () => (
 );
 
 export default ContactUs;
+export async function getStaticProps(context: { locale: any; }) {
+    return {
+      props: {
+        messages: (await import(`../messeges/${context.locale}.json`)).default
+      }
+    };
+  }

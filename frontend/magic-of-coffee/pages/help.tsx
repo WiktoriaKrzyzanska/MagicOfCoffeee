@@ -17,3 +17,10 @@ const HelpPage: React.FC = () => (
 );
 
 export default HelpPage;
+export async function getStaticProps(context: { locale: any; }) {
+    return {
+      props: {
+        messages: (await import(`../messeges/${context.locale}.json`)).default
+      }
+    };
+  }
