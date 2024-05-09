@@ -33,3 +33,17 @@ font-weight: bold;
 .signup:hover {
     background-color: #b98c3f;
 }
+.lang-toggle {
+    padding: 8px 12px; 
+    font-size: 14px; 
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lang-toggle:hover {
+    background-color: #333; 
+}

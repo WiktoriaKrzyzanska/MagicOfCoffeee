@@ -17,3 +17,10 @@ const Privacy: React.FC = () => (
 );
 
 export default Privacy;
+export async function getStaticProps(context: { locale: any; }) {
+    return {
+      props: {
+        messages: (await import(`../messeges/${context.locale}.json`)).default
+      }
+    };
+  }

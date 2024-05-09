@@ -2,21 +2,37 @@
 import React from 'react';
 import './Header.css';
 import Link from 'next/link';
-const Header: React.FC = () => (
-    <div className="header">
-        <Link href="/"><div className="logo">COFFEE MAGIC</div></Link>
-        <nav className="nav">
-            <Link href="/">Home</Link>
-            <Link href="/map">Map</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/contact">Contact Us</Link>
-        </nav>
-        <div className="auth">
-            <Link href="/login" className="auth-link">Sign In</Link>
-            <Link href="/register" className="auth-link signup">Sign Up</Link>
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
+
+const Header: React.FC = () => {
+    const t = useTranslations();  
+    const router = useRouter();
+
+    const handleLanguageChange = () => {
+        const nextLocale = router.locale === 'en-US' ? 'pl' : 'en-US';
+        router.push(router.pathname, router.asPath, { locale: nextLocale });
+    };
+    return (
+        <div className="header">
+            <Link href="/"><div className="logo">{t('name')}</div></Link>
+            <nav className="nav">
+                <Link href="/">{t('home')}</Link>
+                <Link href="/map">{t('map')}</Link>
+                <Link href="/products">{t('products')}</Link>
+                <Link href="/about">{t('about')}</Link>
+                <Link href="/contact">{t('contact')}</Link>
+            </nav>
+            <div className="auth">
+                <Link href="/login" className="auth-link">Sign In</Link>
+                <Link href="/register" className="auth-link signup">Sign Up</Link>
+            </div>
+           <button onClick={handleLanguageChange} className="lang-toggle">
+                {router.locale === 'en-US' ? t('lang') : t('lang')}
+            </button>
         </div>
-    </div>
-);
+    );
+};
 
 export default Header;
+
