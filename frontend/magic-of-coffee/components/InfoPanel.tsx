@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CoffeeListComponent from './CoffeListComponent';
 import './InfoPanel.css'
-
+import { useTranslations } from 'next-intl';
 function calculateCentroid(coordinates: any[]) {
   let area = 0;
   let latitude = 0;
@@ -31,9 +31,10 @@ const InfoPanel: React.FC<InfoPanelProps> = ({ country}) => {
   const [countryDetails, setCountryDetails] = useState(null);
   const [countries, setCountries] = useState<Country[]>([]);
   const [countryId, setCountryId] = useState(null);
-
+  const t = useTranslations();  
 
   useEffect(() => {
+    
     if (country?.properties?.NAME == null) {
       
     }else{
@@ -125,7 +126,7 @@ useEffect(() => {
   
 });
 
-if (!country) return <div className="select-country">Select a country to find more about the coffee from this region</div>;
+if (!country) return <div className="select-country">{t('mapselect')}</div>;
 
   return (
     <div className="info-panel">
@@ -133,19 +134,19 @@ if (!country) return <div className="select-country">Select a country to find mo
       <h1>{country.properties.NAME}</h1>
       </div>
       {weather && (
-        <div className="info-block">
-          <h2>Current Weather</h2>
-          <p>Temperature: {weather.temperature}°C</p>
-          <p>Description: {weather.weather_description}</p>
-        </div>
-      )}
-      {currency && (
-        <div className="info-block">
-          <h2>Currency</h2>
-          <p>Name: {currency.name}</p>
-          <p>Code: {currency.code}</p>
-          <p>Symbol: {currency.symbol}</p>
-        </div>
+         <div className="info-block">
+         <h2>{t('mapweather')}</h2>
+         <p>{t('temp')}{weather.temperature}°C</p>
+         <p>{t('desc')}{weather.weather_description}</p>
+       </div>
+     )}
+     {currency && (
+       <div className="info-block">
+         <h2>{t('curr')}</h2>
+         <p>{t('mapname')}{currency.name}</p>
+         <p>{t('mapcode')}{currency.code}</p>
+         <p>Symbol: {currency.symbol}</p>
+       </div>
       )}
       <div className="info-block">
       {countryDetails && <CoffeeListComponent countryDetails={countryDetails} />}

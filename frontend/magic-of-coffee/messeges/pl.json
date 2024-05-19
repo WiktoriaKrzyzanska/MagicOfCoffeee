@@ -7,6 +7,50 @@
     "contact": "Kontakt",
     "lang": "English",
     "signin": "Zaloguj",
-    "signup": "Zarejestruj"
+    "signup": "Zarejestruj",
+    "h1banner": "Oferujemy Tobie",
+    "coffee": "Kawę",
+    "pbanner": "Najlepiej zacząć dzień filiżanką kawy. Odkryj najlepsze smaki kawy jakie kiedykolwiek próbowałeś. Zapewniamy wszystko co najlepsze dla naszych klientów.",
+    "ordernow": "Zamów teraz",
+
+    "welcm": "Witaj",
+    "welcm2": "Niech rozpocznie się twoja przygoda z kawą",
+    "buy": "Kup",
+
+    "cookie": "Nasza strona oraz partnerzy używaja ciasteczek i podobnych technologi aby ulepszyć funkcjonalność naszej strony, dostosować treść, analizować twój sposób korzystania z witryny oraz pokazać Ci spersonalizowane reklamy. Nie zintegrujemy ciasteczek jeżeli na to nie zezwolisz. Możesz zmienić zdanie w każdym momencie i dowiedzieć się więcej na temat używanych przez nas ciasteczek oraz naszych partnerach poprzez wejście w link do naszej ",
+    "cookienot": "informacji o plikach cookie",
+    "cookieacc": "Zaakceptuj wszystkie ciasteczka",
+
+    "indextitle1":"Odkryj najlepszą kawę",
+    "indexdes1": "Magia kawy to sklep, który oferuję wysokiej jakości kawę, która pomaga zwiększyć twoją produktywność i poprawić nastrój. Dobrze jest napić się kawy, ale napicie się prawdziwej kawy jest jeszcze lepsze. Dajemy gwarancję, że nasza kawa będzie Ci smakować jak żadna inna.",
+    "indextitle2":"Zdobądź szansę na najlepszy poranek",
+    "indexdes2": "Jesteśmy w stanie dać Ci jedyną w swoim rodzaju okazję na lepsze życie z kawą.",
+
+    
+    "mapselect": "Wybierz kraj żeby dowiedzieć się wiecej o kawie z tego regoinu",
+    "weather": "Aktualna pogoda",
+    "temp": "Temperatura: ",
+    "desc": "Opis: ",
+    "curr":"Waluta",
+    "mapname":"Nazwa: ",
+    "mapcode":"Kod: ",
+    
+    "foottitle":"MAGIA KAWY",
+    "up":"W górę",
+    "hns":"Pomoc i wsparcie",
+    "pp":"Polityka prywatności",
+    "terms":"Regulamin",
+    "pricing":"Cennik",
+    "pl":"Polska",
+    "comp":"O firmie",
+
+    
+    "newssub":"Zapisz się do naszego newslettera.",
+    "newsmail":"Adres email",
+    "newsweekly":"Cotygodniowe artykuły",
+    "newsspam":"Zero spamu",
+    "sub":"Zapisz się",
+    "newsenter":"Wpisz swój adres email"
+    
   }
   
