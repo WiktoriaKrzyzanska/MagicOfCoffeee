@@ -131,7 +131,15 @@
   "bankAccountLabel": "Konto bankowe",
   "bankTransferInstruction": "Przelej płatność na pokazane poniżej dane konta bankowego.",
   "accountNumber": "Numer konta",
-  "routingNumber": "Numer rozliczeniowy"
+  "routingNumber": "Numer rozliczeniowy",
+  "shipping": "Wysyłka",
+  "plusTaxes": "Plus podatek",
+  "total": "Łącznie",
+  "shipmentDetails": "Szczegóły wysyłki",
+  "cardType": "Typ karty:",
+  "cardHolder": "Właściciel karty:",
+  "cardNumber": "Numer karty:",
+  "expiryDate": "Data ważności:"
 
   
   }

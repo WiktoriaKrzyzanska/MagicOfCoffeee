@@ -131,7 +131,16 @@
   "bankAccountLabel": "Bank account",
   "bankTransferInstruction": "Please transfer the payment to the bank account details shown below.",
   "accountNumber": "Account number",
-  "routingNumber": "Routing number"
+  "routingNumber": "Routing number",
+  
+  "shipping": "Shipping",
+  "plusTaxes": "Plus taxes",
+  "total": "Total",
+  "shipmentDetails": "Shipment details",
+  "cardType": "Card type:",
+  "cardHolder": "Card holder:",
+  "cardNumber": "Card number:",
+  "expiryDate": "Expiry date:"
 
 }
   
