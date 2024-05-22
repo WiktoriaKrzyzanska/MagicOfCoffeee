@@ -61,6 +61,8 @@
   "confirmPassword": "Confirm Password",
   "phoneNumber": "Phone Number",
   "agreeTerms": "I agree to the Terms and Conditions",
-  "registration":"Sign Up"
+  "registration":"Sign Up",
+  "log in":"Sign in",
+  "loginWithFacebook": "Login with Facebook"
 }
   

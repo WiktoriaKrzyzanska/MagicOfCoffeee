@@ -61,6 +61,8 @@
   "confirmPassword": "Potwierdź hasło",
   "phoneNumber": "Numer telefonu",
   "agreeTerms": "Zgadzam się na warunki i zasady",
-  "registration":"Rejestracja"
+  "registration":"Rejestracja",
+  "log in":"Logowanie",
+  "loginWithFacebook": "Zaloguj przez Facebook"
   }
   
