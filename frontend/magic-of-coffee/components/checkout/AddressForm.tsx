@@ -6,18 +6,19 @@ import FormLabel from '@mui/material/FormLabel';
 import Grid from '@mui/material/Grid';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/system';
-
+import { useTranslations } from 'next-intl';
 const FormGrid = styled(Grid)(() => ({
   display: 'flex',
   flexDirection: 'column',
 }));
 
 export default function AddressForm() {
+  const t = useTranslations();
   return (
     <Grid container spacing={3}>
       <FormGrid item xs={12} md={6}>
         <FormLabel htmlFor="first-name" required>
-          First name
+        {t('fname')}
         </FormLabel>
         <OutlinedInput
           id="first-name"
@@ -30,7 +31,7 @@ export default function AddressForm() {
       </FormGrid>
       <FormGrid item xs={12} md={6}>
         <FormLabel htmlFor="last-name" required>
-          Last name
+        {t('lastname')}
         </FormLabel>
         <OutlinedInput
           id="last-name"
@@ -43,7 +44,7 @@ export default function AddressForm() {
       </FormGrid>
       <FormGrid item xs={12}>
         <FormLabel htmlFor="address1" required>
-          Address line 1
+        {t('addressLine1')}
         </FormLabel>
         <OutlinedInput
           id="address1"
@@ -55,19 +56,19 @@ export default function AddressForm() {
         />
       </FormGrid>
       <FormGrid item xs={12}>
-        <FormLabel htmlFor="address2">Address line 2</FormLabel>
+        <FormLabel htmlFor="address2">{t('addressLine2')}</FormLabel>
         <OutlinedInput
           id="address2"
           name="address2"
           type="address2"
-          placeholder="Apartment, suite, unit, etc. (optional)"
+          placeholder={t('addressLine2Placeholder')}
           autoComplete="shipping address-line2"
           required
         />
       </FormGrid>
       <FormGrid item xs={6}>
         <FormLabel htmlFor="city" required>
-          City
+        {t('city')}
         </FormLabel>
         <OutlinedInput
           id="city"
@@ -80,7 +81,7 @@ export default function AddressForm() {
       </FormGrid>
       <FormGrid item xs={6}>
         <FormLabel htmlFor="state" required>
-          State
+        {t('state')}
         </FormLabel>
         <OutlinedInput
           id="state"
@@ -93,7 +94,7 @@ export default function AddressForm() {
       </FormGrid>
       <FormGrid item xs={6}>
         <FormLabel htmlFor="zip" required>
-          Zip / Postal code
+        {t('zip')}
         </FormLabel>
         <OutlinedInput
           id="zip"
@@ -106,7 +107,7 @@ export default function AddressForm() {
       </FormGrid>
       <FormGrid item xs={6}>
         <FormLabel htmlFor="country" required>
-          Country
+        {t('country')}
         </FormLabel>
         <OutlinedInput
           id="country"
@@ -120,7 +121,7 @@ export default function AddressForm() {
       <FormGrid item xs={12}>
         <FormControlLabel
           control={<Checkbox name="saveAddress" value="yes" />}
-          label="Use this address for payment details"
+          label={t('saveAddress')}
         />
       </FormGrid>
     </Grid>

@@ -55,7 +55,7 @@
   "passwordsNoMatch": "Passwords do not match",
   "passwordMinLength": "Password must be at least 8 characters long",
   "fname": "Name",
-  "lastname": "Lastname",
+  "lastname": "Last name",
   "email": "E-mail",
   "password": "Password",
   "confirmPassword": "Confirm Password",
@@ -98,7 +98,16 @@
   "yourMessage": "Your message",
   "submit": "Submit",
   "emailSent": "Email sent successfully!",
-  "emailError": "Error sending email: "
+  "emailError": "Error sending email: ",
+  
+  "addressLine1": "Address line 1",
+  "addressLine2": "Address line 2",
+  "addressLine2Placeholder": "Apartment, suite, unit, etc. (optional)",
+  "city": "City",
+  "state": "State",
+  "zip": "Zip / Postal code",
+  "country": "Country",
+  "saveAddress": "Use this address for payment details"
 
 }
   

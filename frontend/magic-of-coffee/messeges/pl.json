@@ -98,7 +98,16 @@
   "yourMessage": "Twoja wiadomość",
   "submit": "Wyślij",
   "emailSent": "E-mail wysłany pomyślnie!",
-  "emailError": "Błąd wysyłania e-maila: "
+  "emailError": "Błąd wysyłania e-maila: ",
+
+  "addressLine1": "Adres linia 1",
+  "addressLine2": "Adres linia 2",
+  "addressLine2Placeholder": "Mieszkanie, apartament, itp. (opcjonalnie)",
+  "city": "Miasto",
+  "state": "Stan",
+  "zip": "Kod pocztowy",
+  "country": "Kraj",
+  "saveAddress": "Użyj tego adresu do szczegółów płatności"
 
   
   }
