@@ -120,7 +120,18 @@
   "orderConfirmation": "Wysłaliśmy potwierdzenie zamówienia na Twój e-mail i poinformujemy Cię, gdy zostanie wysłane.",
   "previous": "Poprzedni",
   "placeOrder": "Złóż zamówienie",
-  "next": "Dalej"
+  "next": "Dalej",
+  "paymentOptions": "Opcje płatności",
+  "card": "Karta",
+  "bankAccount": "Konto bankowe",
+  "creditCard": "Karta kredytowa",
+  "rememberCardDetails": "Zapamiętaj dane karty kredytowej na przyszłość",
+  "pay": "Zapłać",
+  "bankTransferWarning": "Twoje zamówienie zostanie przetworzone, gdy otrzymamy środki.",
+  "bankAccountLabel": "Konto bankowe",
+  "bankTransferInstruction": "Przelej płatność na pokazane poniżej dane konta bankowego.",
+  "accountNumber": "Numer konta",
+  "routingNumber": "Numer rozliczeniowy"
 
   
   }

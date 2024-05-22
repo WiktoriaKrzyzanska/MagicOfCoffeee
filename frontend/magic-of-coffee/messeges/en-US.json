@@ -120,7 +120,18 @@
   "orderConfirmation": "We have emailed your order confirmation and will update you once it's shipped.",
   "previous": "Previous",
   "placeOrder": "Place order",
-  "next": "Next"
+  "next": "Next",
+  "paymentOptions": "Payment options",
+  "card": "Card",
+  "bankAccount": "Bank account",
+  "creditCard": "Credit card",
+  "rememberCardDetails": "Remember credit card details for next time",
+  "pay": "Pay",
+  "bankTransferWarning": "Your order will be processed once we receive the funds.",
+  "bankAccountLabel": "Bank account",
+  "bankTransferInstruction": "Please transfer the payment to the bank account details shown below.",
+  "accountNumber": "Account number",
+  "routingNumber": "Routing number"
 
 }
   
