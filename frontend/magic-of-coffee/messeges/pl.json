@@ -50,7 +50,14 @@
     "newsweekly":"Cotygodniowe artykuły",
     "newsspam":"Zero spamu",
     "sub":"Zapisz się",
-    "newsenter":"Wpisz swój adres email"
-    
+    "newsenter":"Wpisz swój adres email",
+
+    "save up": "Zaoszczędź nawet do ",
+    "shipp per":"dostaw na miesiąc",
+    "countries to cho":"krajów do wyboru",
+
+    "cookie1": "Jak wiele firm, używamy ciasteczek na tej stronie internetowej, aby zaoferować Ci unikalne doświadczenie przeglądania. Ciasteczka to pliki tekstowe zawierające niewielkie ilości informacji, które mogą być umieszczane w Twojej przeglądarce, komputerze lub urządzeniu, gdy odwiedzasz niektóre strony internetowe, aby zbierać i śledzić informacje na temat korzystania z tych stron. Na przykład, ciasteczka mogą być używane do zapamiętywania odwiedzonych stron, czasu spędzonego na każdej stronie lub zawartości koszyka zakupowego. Ciasteczka mogą mieć formę sesyjnych (oznacza to, że zostaną usunięte z Twojego komputera lub urządzenia po opuszczeniu strony internetowej) lub trwałych (oznacza to, że pozostaną na Twoim komputerze lub urządzeniu, dopóki ich nie usuniesz lub nie wygasną).",
+    "cookie2": "Niektóre strony na naszych stronach internetowych zawierają również sygnalizatory web (znane również jako tagi internetowe, pikselowe tagi i przezroczyste GIF-y). Są to małe pliki graficzne, które mogą być umieszczone na stronie internetowej lub w e-mailu w celu rejestrowania zachowań przeglądania. Na przykład, sygnalizatory web mogą być używane do sprawdzenia, czy promocyjny e-mail został wyświetlony.",
+    "priv notice" :"Informacja o ochronie prywatności"
   }
   
