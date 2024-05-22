@@ -107,7 +107,20 @@
   "state": "State",
   "zip": "Zip / Postal code",
   "country": "Country",
-  "saveAddress": "Use this address for payment details"
+  "saveAddress": "Use this address for payment details",
+  "streetnamenumber":"Street name and number",
+
+  "backToMainPage": "Back to Main Page",
+  "shippingAddress": "Shipping address",
+  "paymentDetails": "Payment details",
+  "reviewYourOrder": "Review your order",
+  "selectedProducts": "Selected products",
+  "thankYou": "Thank you for your order!",
+  "orderNumber": "Your order number is",
+  "orderConfirmation": "We have emailed your order confirmation and will update you once it's shipped.",
+  "previous": "Previous",
+  "placeOrder": "Place order",
+  "next": "Next"
 
 }
   

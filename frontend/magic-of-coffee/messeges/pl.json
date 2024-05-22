@@ -107,7 +107,20 @@
   "state": "Stan",
   "zip": "Kod pocztowy",
   "country": "Kraj",
-  "saveAddress": "Użyj tego adresu do szczegółów płatności"
+  "saveAddress": "Użyj tego adresu do szczegółów płatności",
+  "streetnamenumber":"Nazwa i numer ulicy",
+
+  "backToMainPage": "Powrót na stronę główną",
+  "shippingAddress": "Adres wysyłki",
+  "paymentDetails": "Szczegóły płatności",
+  "reviewYourOrder": "Sprawdź swoje zamówienie",
+  "selectedProducts": "Wybrane produkty",
+  "thankYou": "Dziękujemy za zamówienie!",
+  "orderNumber": "Numer Twojego zamówienia to",
+  "orderConfirmation": "Wysłaliśmy potwierdzenie zamówienia na Twój e-mail i poinformujemy Cię, gdy zostanie wysłane.",
+  "previous": "Poprzedni",
+  "placeOrder": "Złóż zamówienie",
+  "next": "Dalej"
 
   
   }

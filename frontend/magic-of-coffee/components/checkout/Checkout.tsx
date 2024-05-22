@@ -14,10 +14,10 @@ import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 import PaymentForm from './PaymentForm';
 import './Checkout.css';
-
+import { useTranslations } from 'next-intl';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+
 
 const logoStyle = {
   width: '140px',
@@ -45,7 +45,9 @@ export default function Checkout() {
   const checkoutTheme = createTheme(getCheckoutTheme(mode));
   const defaultTheme = createTheme({ palette: { mode } });
   const [activeStep, setActiveStep] = React.useState(0);
-
+  const t = useTranslations();
+  const steps = [t('shippingAddress'), t('paymentDetails'), t('reviewYourOrder')];
+  
   const toggleColorMode = () => {
     setMode((prev: PaletteMode) => (prev === 'dark' ? 'light' : 'dark'));
   };
@@ -69,7 +71,7 @@ export default function Checkout() {
         <Grid item xs={12} sm={5} lg={4} sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'column', backgroundColor: 'background.paper', borderRight: { sm: 'none', md: '1px solid' }, borderColor: { sm: 'none', md: 'divider' }, alignItems: 'start', pt: 4, px: 10, gap: 4 }}>
           <Box sx={{ display: 'flex', alignItems: 'end', height: 150 }}>
             <Button startIcon={<ArrowBackRoundedIcon />} component="a" href="/" sx={{ ml: '-8px' }} className="bttn-checkout" color="primary">
-              Back to Main Page
+            {t('backToMainPage')}
             </Button>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, width: '100%', maxWidth: 500 }}>
@@ -80,7 +82,7 @@ export default function Checkout() {
           <Box sx={{ display: 'flex', justifyContent: { sm: 'space-between', md: 'flex-end' }, alignItems: 'center', width: '100%', maxWidth: { sm: '100%', md: 600 } }}>
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', width: '100%', justifyContent: 'space-between' }}>
               <Button startIcon={<ArrowBackRoundedIcon />} component="a" href="/" sx={{ alignSelf: 'start' }}>
-                Back to Main Page
+              {t('backToMainPage')}
               </Button>
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
@@ -99,7 +101,7 @@ export default function Checkout() {
             <CardContent sx={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between', ':last-child': { pb: 2 } }}>
               <div>
                 <Typography variant="subtitle2" gutterBottom>
-                  Selected products
+                {t('selectedProducts')}
                 </Typography>
                 <Typography variant="body1">{activeStep >= 2 ? '$144.97' : '$134.98'}</Typography>
               </div>
@@ -117,11 +119,10 @@ export default function Checkout() {
             {activeStep === steps.length ? (
               <Stack spacing={2} useFlexGap>
                 <Typography variant="h1">📦</Typography>
-                <Typography variant="h5">Thank you for your order!</Typography>
+                <Typography variant="h5">{t('thankYou')}</Typography>
                 <Typography variant="body1" color="text.secondary">
-                  Your order number is
-                  <strong>&nbsp;#140396</strong>. We have emailed your order
-                  confirmation and will update you once it's shipped.
+                {t('orderNumber')}
+                  <strong>&nbsp;#140396</strong>.{t('orderConfirmation')}
                 </Typography>
               </Stack>
             ) : (
@@ -132,16 +133,16 @@ export default function Checkout() {
                 <Box sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', sm: 'row' }, justifyContent: activeStep !== 0 ? 'space-between' : 'flex-end', alignItems: 'end', flexGrow: 1, gap: 1, pb: { xs: 12, sm: 0 }, mt: { xs: 2, sm: 0 }, mb: '60px' }}>
                   {activeStep !== 0 && (
                     <Button className="bttn-checkout" startIcon={<ChevronLeftRoundedIcon />} onClick={handleBack} variant="text" sx={{ display: { xs: 'none', sm: 'flex' } }}>
-                      Previous
+                       {t('previous')}
                     </Button>
                   )}
                   {activeStep !== 0 && (
                     <Button startIcon={<ChevronLeftRoundedIcon />} onClick={handleBack} variant="outlined" fullWidth sx={{ display: { xs: 'flex', sm: 'none' } }}>
-                      Previous
+                       {t('previous')}
                     </Button>
                   )}
                   <Button variant="contained" className="bbttn-checkout" endIcon={<ChevronRightRoundedIcon />} onClick={handleNext} sx={{ width: { xs: '100%', sm: 'fit-content' } }}>
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                    {activeStep === steps.length - 1 ? t('placeOrder') : t('next')}
                   </Button>
                 </Box>
               </React.Fragment>
@@ -152,11 +153,11 @@ export default function Checkout() {
     </ThemeProvider>
   );
 }
-export async function getStaticProps(context: { locale: any; }) {
-  return {
-    props: {
-      messages: (await import(`../messeges/${context.locale}.json`)).default
-    }
-  };
-}
+// export async function getStaticProps(context: { locale: any; }) {
+//   return {
+//     props: {
+//       messages: (await import(`../messeges/${context.locale}.json`)).default
+//     }
+//   };
+// }
 

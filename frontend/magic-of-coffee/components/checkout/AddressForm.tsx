@@ -50,7 +50,7 @@ export default function AddressForm() {
           id="address1"
           name="address1"
           type="address1"
-          placeholder="Street name and number"
+          placeholder={t("streetnamenumber")}
           autoComplete="shipping address-line1"
           required
         />
