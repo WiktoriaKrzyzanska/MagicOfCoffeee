@@ -1,7 +1,8 @@
 import React from 'react';
 import './Movie.css';
-
+import { useTranslations } from 'next-intl';
 const Movie = () => {
+    const t = useTranslations();  
     return (
         <div className='video-container'>
             <div className="overlay"></div>
@@ -9,10 +10,10 @@ const Movie = () => {
                 Your browser does not support the video tag.
             </video>
             <div className="video-content">
-                <h1>Welcome</h1>
-                <p>Let your magical journey to the world of coffee begin</p>
-                <button className="button" id="buy-button">Buy</button>
-                <button className="button" id="about-us-button">About Us</button>
+                <h1>{t('welcm')}</h1>
+                <p>{t('welcm2')}</p>
+                <button className="button" id="buy-button">{t('buy')}</button>
+                <button className="button" id="about-us-button">{t('about')}</button>
             </div>
         </div>
     )

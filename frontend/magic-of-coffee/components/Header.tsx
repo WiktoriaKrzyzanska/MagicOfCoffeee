@@ -24,8 +24,8 @@ const Header: React.FC = () => {
                 <Link href="/contact">{t('contact')}</Link>
             </nav>
             <div className="auth">
-                <Link href="/login" className="auth-link">Sign In</Link>
-                <Link href="/register" className="auth-link signup">Sign Up</Link>
+                <Link href="/login" className="auth-link">{t('signin')}</Link>
+                <Link href="/register" className="auth-link signup">{t('signup')}</Link>
             </div>
            <button onClick={handleLanguageChange} className="lang-toggle">
                 {router.locale === 'en-US' ? t('lang') : t('lang')}
