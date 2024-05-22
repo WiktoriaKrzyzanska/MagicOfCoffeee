@@ -5,6 +5,50 @@
     "products": "Products",
     "about": "About Us",
     "contact": "Contact Us",
-    "lang": "Polski"
+    "lang": "Polski",
+    "signin": "Sign in",
+    "signup": "Sign up",
+
+    "h1banner": "We've got you covered with",
+    "coffee": "Coffee",
+    "pbanner": "It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.",
+    "ordernow": "Order now",
+
+    "welcm": "Welcome",
+    "welcm2": "Let your magical journey to the world of coffee begin",
+    "buy": "Buy",
+
+    "cookie": "Our website and partners use cookies and similar technologies to improve the functionality of the site, personalize content, analyze your use of the site and show you personalized ads. We won't set these cookies unless you enable them. You can change your mind at any time and learn more on the cookies used by us and our partners by clicking our ",
+    "cookienot": "Cookie Notice",
+    "cookieacc": "Accept All Cookies",
+
+    "indextitle1":"Discover the best coffee",
+    "indexdes1": "Magic Coffee is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.",
+    "indextitle2":"Get a chance to have the best morning",
+    "indexdes2": "We are giving you are one time opportunity to experience a better life with coffee.",
+
+    "mapselect": "Select a country to find more about the coffee from this region",
+    "weather": "Current Weather",
+    "temp": "Temperature: ",
+    "desc": "Description: ",
+    "curr":"Currency",
+    "mapname":"Name: ",
+    "mapcode":"Code: ",
+
+    "foottitle":"COFFEE MAGIC",
+    "up":"Go up",
+    "hns":"Help & Support",
+    "pp":"Privacy Policy",
+    "terms":"Terms of service",
+    "pricing":"Pricing",
+    "pl":"Poland",
+    "comp":"Company",
+
+    "newssub":"Subscribe to our newsletter.",
+    "newsmail":"Email address",
+    "newsweekly":"Weekly articles",
+    "newsspam":"No spam",
+    "nsub":"Subscribe",
+    "newsenter":"Enter your email"
   }
   

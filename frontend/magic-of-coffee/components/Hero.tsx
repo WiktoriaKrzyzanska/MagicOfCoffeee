@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import coffeeBeans from '../public/images/coffee-bean.jpg'; 
-
+import { useTranslations } from 'next-intl';
 interface HeroProps {
   title: string;
   description: string;
 }
 
 const Hero: React.FC<HeroProps> = ({ title, description }) => {
+  const t = useTranslations();  
   return (
    <>
    <div className="bg-white">
@@ -19,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ title, description }) => {
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{title}</h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
           <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-            <a href="#" className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600">Buy</a>
+            <a href="#" className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600">{t('buy')}</a>
           </div>
         </div>
         <div className="flex-1 mt-8 lg:mt-0">
