@@ -82,7 +82,23 @@
   "help3": "Saturday, Sunday and Bank Holidays from 10:00 to 18:30 CET",
   "help4": "You can contact us via e-mail at: magia.kawy.magic.of.coffee@gmail.com",
   "help5": "One of our representatives will be happy to assist you over the phone at the following number:",
-  "helpNumber": "+48 (0) 111222333"
-  
+  "helpNumber": "+48 (0) 111222333",
+  "ourStory": "Our Story",
+  "ourStoryContent": "Discover the journey of Coffee Magic as we bring you the finest coffee beans sourced from around the world. Our passion for quality coffee drives us to seek out the best and most unique flavors for our customers.",
+  "meetOurTeam": "Meet Our Team",
+  "meetOurTeamContent": "Our team of coffee enthusiasts works tirelessly to ensure you receive only the best products. From our roasters to our customer service staff, meet the people who make it all happen.",
+  "contactInformation": "Contact Information",
+  "callUs": "Call Us: +48 444 333 222",
+  "location": "Location: ul. Olszynkowa 74, Racibórz 47-406, Poland",
+  "businessHours": "Business Hours: Mon – Fri: 9 AM – 5 PM, Sat – Sun: Closed",
+  "contactUs": "Contact Us",
+  "enterName": "Enter your name",
+  "enterEmail": "Enter your email address",
+  "enterSubject": "Enter the subject",
+  "yourMessage": "Your message",
+  "submit": "Submit",
+  "emailSent": "Email sent successfully!",
+  "emailError": "Error sending email: "
+
 }
   

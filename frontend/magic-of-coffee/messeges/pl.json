@@ -82,7 +82,24 @@
   "help3": "Sobota, niedziela i święta od 10:00 do 18:30 CET",
   "help4": "Możesz skontaktować się z nami drogą mailową na adres: magia.kawy.magic.of.coffee@gmail.com",
   "help5": "Jeden z naszych przedstawicieli chętnie pomoże Ci przez telefon pod następującym numerem:",
-  "helpNumber": "+48 (0) 111222333"
+  "helpNumber": "+48 (0) 111222333",
+  "ourStory": "Nasza Historia",
+  "ourStoryContent": "Odkryj podróż Coffee Magic, gdy dostarczamy Ci najdelikatniejsze ziarna kawy z całego świata. Nasza pasja do jakości kawy napędza nas do poszukiwania najlepszych i najbardziej unikalnych smaków dla naszych klientów.",
+  "meetOurTeam": "Poznaj Nasz Zespół",
+  "meetOurTeamContent": "Nasz zespół entuzjastów kawy pracuje niestrudzenie, aby zapewnić Ci tylko najlepsze produkty. Od naszych palaczy po personel obsługi klienta, poznaj ludzi, którzy sprawiają, że wszystko to jest możliwe.",
+  "contactInformation": "Informacje Kontaktowe",
+  "callUs": "Zadzwoń do nas: +48 444 333 222",
+  "location": "Lokalizacja: ul. Olszynkowa 74, Racibórz 47-406, Polska",
+  "businessHours": "Godziny otwarcia: Pon – Pt: 9:00 – 17:00, Sob – Nd: Zamknięte",
+  "contactUs": "Skontaktuj się z nami",
+  "enterName": "Wpisz swoje imię",
+  "enterEmail": "Wpisz swój adres e-mail",
+  "enterSubject": "Wpisz temat",
+  "yourMessage": "Twoja wiadomość",
+  "submit": "Wyślij",
+  "emailSent": "E-mail wysłany pomyślnie!",
+  "emailError": "Błąd wysyłania e-maila: "
+
   
   }
   
