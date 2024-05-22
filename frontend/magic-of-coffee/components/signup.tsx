@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../components/Contact.css'
 import './signup.css'
-
+import { useTranslations } from 'next-intl';
 const SignUp: React.FC = () => {
-    const [action, setAction] = useState("Sign Up");
+    const t = useTranslations(); 
+   
+    const [action, setAction] = useState(t('registration'));
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
 
@@ -25,24 +27,24 @@ const SignUp: React.FC = () => {
             if (/^\S+@\S+\.\S+$/.test(email)) {
                 setEmailError("");
             } else {
-                setEmailError("Invalid email address");
+                setEmailError(t('invalidEmail'));
             }
         }
-    }, [email]);
+    }, [email, t]);
 
     useEffect(() => {
         if (phoneNumber) {
             if (/^\d{9,11}$/.test(phoneNumber)) {
                 setPhoneError("");
             } else {
-                setPhoneError("Invalid phone number");
+                setPhoneError(t('invalidPhone'));
             }
         }
-    }, [phoneNumber]);
+    }, [phoneNumber, t]);
     useEffect(() => {
         if (name) {
             if (!/^[a-zA-Z\s]+$/.test(name)) {
-                setNameError("only letters and spaces");
+                setNameError(t('onlyLettersSpaces'));
             } else {
                 setNameError(""); 
             }
@@ -51,25 +53,25 @@ const SignUp: React.FC = () => {
     useEffect(() => {
         if (lastName) {
             if (!/^[a-zA-Z\s]+$/.test(lastName)) {
-                setLastNameError("only letters and spaces");
+                setLastNameError(t('onlyLettersSpaces'));
             } else {
                 setLastNameError("");
             }
         }
-    }, [lastName]);
+    }, [lastName, t]);
 
     useEffect(() => {
         if (password || confirmPassword) {
             if (password !== confirmPassword) {
-                setPasswordError("Passwords do not match");
+                setPasswordError(t('passwordsNoMatch'));
             } else if (password.length < 8) {
-                setPasswordError("Password must be at least 8 characters long");
+                setPasswordError(t('passwordMinLength'));
             } else {
                 setPasswordError("");
             }
         }
-    }, [password, confirmPassword]);
-
+    }, [password, confirmPassword, t]);
+     
     return (
         <div className='container'>
                 <div className="box">
@@ -81,33 +83,33 @@ const SignUp: React.FC = () => {
                     <div className="column">
                         <div className="input">
                             <img src="/images/user.png" alt="User Icon" />
-                            <input placeholder="Name" type="text" value = {name} onChange={e => setName(e.target.value)} autoComplete="new-password" />
+                            <input placeholder={t('fname')} type="text" value = {name} onChange={e => setName(e.target.value)} autoComplete="new-password" />
                             {nameError && <div className="error">{nameError}</div>}
                         </div>
                         <div className="input">
                         <img src="/images/user.png" alt="User Icon" />
-                            <input placeholder="Lastname" type="text" value = {lastName} onChange={e => setLastName(e.target.value)} autoComplete="new-password"/>
+                            <input placeholder={t('lastName')} type="text" value = {lastName} onChange={e => setLastName(e.target.value)} autoComplete="new-password"/>
                             {lastNameError && <div className="error">{lastNameError}</div>}
                         </div>
                         <div className="input">
                             <img src="/images/email.png" alt="Email Icon" />
-                            <input placeholder="E-mail" type="email" value={email} onChange={e => setEmail(e.target.value)}autoComplete="new-password" />
+                            <input placeholder={t('email')} type="email" value={email} onChange={e => setEmail(e.target.value)}autoComplete="new-password" />
                             {emailError && <div className="error">{emailError}</div>}
                         </div>
                     </div>
                     <div className="column">
                         <div className="input">
                             <img src="/images/padlock.png" alt="Padlock Icon" />
-                            <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="new-password" />
+                            <input placeholder={t('password')} type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="new-password" />
                         </div>
                         <div className="input">
                             <img src="/images/padlock.png" alt="Padlock Icon" />
-                            <input placeholder="Confirm Password" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} autoComplete="new-password"/>
+                            <input placeholder={t('confirmPassword')} type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} autoComplete="new-password"/>
                             {passwordError && <div className="error">{passwordError}</div>}
                         </div>
                         <div className="input">
                             <img src="/images/phone-call.png" alt="Phone Icon" />
-                            <input placeholder="Phone Number" type="text" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}autoComplete="new-password" />
+                            <input placeholder={t('phoneNumber')} type="text" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}autoComplete="new-password" />
                             {phoneError && <div className="error">{phoneError}</div>}
                         </div>
                     </div>
@@ -115,10 +117,10 @@ const SignUp: React.FC = () => {
                 </form>
                 <div className="terms-container">
                     <input type="checkbox" id="terms" name="terms" />
-                    <label htmlFor="terms">I agree to the Terms and Conditions</label>
+                    <label htmlFor="terms">{t('agreeTerms')}</label>
                 </div>
                 <div className="submit-container">
-                    <div className="submit">Sign Up</div>
+                    <div className="submit">{t('signup')}</div>
                 </div>
             </div>
     );

@@ -5,7 +5,7 @@ const PrivacyNotice: React.FC = () => {
     const t = useTranslations();  
     return (
         <div className={'container'}>
-            <h1 className={'title'}>Privacy Notice</h1>
+            <h1 className={'title'}>{t('priv notice')}</h1>
             <p className={'content'}>
                 {t('cookie1')}
             </p>
