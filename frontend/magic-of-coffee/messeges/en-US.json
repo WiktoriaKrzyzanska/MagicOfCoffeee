@@ -63,6 +63,26 @@
   "agreeTerms": "I agree to the Terms and Conditions",
   "registration":"Sign Up",
   "log in":"Sign in",
-  "loginWithFacebook": "Login with Facebook"
+  "loginWithFacebook": "Login with Facebook",
+  "available": "Available",
+  "unavailable": "Unavailable",
+  "rating": "Rating",
+  "origin": "Origin",
+  "bitterness": "Bitterness",
+  "taste": "Taste",
+  "price": "Price",
+  "pricingPlan": "Our Pricing Plan",
+  "annually": "Annually",
+  "monthly": "Monthly",
+  "essential": "Essential",
+  "content1": "You do not have to register to use the Website but will need to register to purchase goods via the Website. There are advantages in registering and creating an account with us. Not only will shopping be easier, but your experience with us will become more personalised over time. By creating an account, you can store credit card information for easier and faster checkout, maintain an address book, review your order history and edit billing or shipping information. Please note that we respect your concerns about privacy and recognize the importance of being transparent on how we handle the personal information you provide us. Please read our Privacy Notice for more information.",
+  "content2": "You agree that the information you provide to us will be true, accurate, current and complete in all respects. You also agree to notify us of any changes in this information. All personal information you provide to us when you use the Website will be used in accordance with our Privacy Notice, which is incorporated into these Terms of Use.",
+  "help1": "Our Customer Assistance team continues to be available to help by email or chat between the hours of:",
+  "help2": "Monday to Friday from 8:00 to 22:00 CET",
+  "help3": "Saturday, Sunday and Bank Holidays from 10:00 to 18:30 CET",
+  "help4": "You can contact us via e-mail at: magia.kawy.magic.of.coffee@gmail.com",
+  "help5": "One of our representatives will be happy to assist you over the phone at the following number:",
+  "helpNumber": "+48 (0) 111222333"
+  
 }
   

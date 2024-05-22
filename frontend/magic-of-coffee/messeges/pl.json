@@ -63,6 +63,26 @@
   "agreeTerms": "Zgadzam się na warunki i zasady",
   "registration":"Rejestracja",
   "log in":"Logowanie",
-  "loginWithFacebook": "Zaloguj przez Facebook"
+  "loginWithFacebook": "Zaloguj przez Facebook",
+  "available": "Dostępny",
+  "unavailable": "Niedostępny",
+  "rating": "Ocena",
+  "origin": "Pochodzenie",
+  "bitterness": "Goryczka",
+  "taste": "Smak",
+  "price": "Cena",
+  "pricingPlan": "Nasz Cennik",
+  "annually": "Rocznie",
+  "monthly": "Miesięcznie",
+  "essential": "Podstawowy",
+  "content1": "Nie musisz się rejestrować, aby korzystać z Witryny, ale musisz się zarejestrować, aby kupować towary za pośrednictwem Witryny. Rejestracja i tworzenie konta u nas ma swoje zalety. Nie tylko zakupy będą łatwiejsze, ale z czasem Twoje doświadczenia z nami będą bardziej spersonalizowane. Tworząc konto, możesz przechowywać informacje o karcie kredytowej w celu łatwiejszego i szybszego realizowania transakcji, utrzymywać książkę adresową, przeglądać historię zamówień i edytować informacje rozliczeniowe lub wysyłkowe. Należy zauważyć, że szanujemy Twoje obawy dotyczące prywatności i rozpoznajemy znaczenie bycia transparentnym w kwestii, jak postępujemy z przekazanymi nam danymi osobowymi. Proszę przeczytać naszą Politykę Prywatności, aby uzyskać więcej informacji.",
+  "content2": "Zgadzasz się, że informacje, które nam podasz, będą prawdziwe, dokładne, aktualne i kompletne we wszystkich aspektach. Zgadzasz się również powiadomić nas o wszelkich zmianach w tych informacjach. Wszystkie dane osobowe, które nam podasz podczas korzystania z Witryny, będą wykorzystywane zgodnie z naszą Polityką Prywatności, która jest częścią niniejszych Warunków Użytkowania.",
+  "help1": "Nasz zespół wsparcia klienta jest dostępny, aby pomóc drogą mailową lub przez czat w godzinach:",
+  "help2": "Od poniedziałku do piątku od 8:00 do 22:00 CET",
+  "help3": "Sobota, niedziela i święta od 10:00 do 18:30 CET",
+  "help4": "Możesz skontaktować się z nami drogą mailową na adres: magia.kawy.magic.of.coffee@gmail.com",
+  "help5": "Jeden z naszych przedstawicieli chętnie pomoże Ci przez telefon pod następującym numerem:",
+  "helpNumber": "+48 (0) 111222333"
+  
   }
   
