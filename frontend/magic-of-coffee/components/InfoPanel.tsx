@@ -66,7 +66,7 @@ const InfoPanel: React.FC<InfoPanelProps> = ({ country}) => {
   useEffect(() => {
     if (country) {
       const [lon, lat] = calculateCentroid(country.geometry.coordinates[0]);
-      const apiKey = 'f25f7635f6564be095194125240705'; 
+      const apiKey = ''; 
       const weatherUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}&aqi=no`;
 
       axios.get(weatherUrl)
