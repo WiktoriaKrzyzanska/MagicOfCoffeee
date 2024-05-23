@@ -1,29 +1,31 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import LearningOptions from './LearningOptions'
 
-const config = {
+const config = (t) => {
+  return {
     botName: "Helpdesk",
     initialMessages: [
-        createChatBotMessage("Hi, I'm a HelpDesk bot. What can I help you with? ", {
-          widget: "learningOptions",
-        }),
-      ],
-  customStyles: {
-    botMessageBox: {
-      backgroundColor: '#1a1a1a;',
+      createChatBotMessage(t('botGreeting'), {
+        widget: "learningOptions",
+      }),
+    ],
+    customStyles: {
+      botMessageBox: {
+        backgroundColor: '#1a1a1a',
+      },
+      chatButton: {
+        backgroundColor: '#f8b400',
+      },
     },
-    chatButton: {
-      backgroundColor: '#f8b400',
-    },
-  },
-  widgets: [
-    {
-      widgetName: "learningOptions",
-      widgetFunc: (props) => <LearningOptions {...props} />,
-      props: {}, 
-      mapStateToProps: [],  
-    },
+    widgets: [
+      {
+        widgetName: "learningOptions",
+        widgetFunc: (props) => <LearningOptions {...props} />,
+        props: {},
+        mapStateToProps: [],
+      },
     ],
   };
-  
-  export default config;
+};
+
+export default config;

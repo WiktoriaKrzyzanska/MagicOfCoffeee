@@ -7,6 +7,16 @@
     align-items: center;
     justify-content: center;
 }
+.submit.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    margin-left: 30px;
+}
+
 
 .box{
     display: flex;

@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import '../components/Contact.css';
 import './signup.css';
 import FacebookLogin from 'react-facebook-login';
+import { useTranslations } from 'next-intl';
 
 const SignIn: React.FC = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const t = useTranslations();
+    const router = useRouter();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const responseFacebook = (response: any) => {
         console.log(response);
@@ -14,11 +18,13 @@ const SignIn: React.FC = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/api/signin', {
+            const response = await axios.post('http://localhost:8082/auth/signin', {
                 email: email,
                 password: password
             });
             console.log('Login success:', response.data);
+            localStorage.setItem('token', response.data);
+            router.push('/'); 
         } catch (error) {
             console.error('Login failed:', error);
         }
@@ -27,7 +33,7 @@ const SignIn: React.FC = () => {
     return (
         <div className='container'>
             <div className="box">
-                <div className="text">Login</div>
+                <div className="text">{t('log in')}</div>
                 <div className="underline"></div>
             </div>
             <form onSubmit={(e) => {
@@ -37,15 +43,15 @@ const SignIn: React.FC = () => {
                 <div className="inputs2">
                     <div className="input">
                         <img src="/images/email.png" alt="Email Icon" />
-                        <input placeholder="E-mail" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input placeholder={t('email')} type="email" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
                     <div className="input">
                         <img src="/images/padlock.png" alt="Padlock Icon" />
-                        <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                        <input placeholder={t('password')} type="password" value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
                 </div>
                 <div className="submit-container">
-                    <button type="submit" className="submit">Sign in</button>
+                    <button type="submit" className="submit">{t('signin')}</button>
                 </div>
             </form>
             <FacebookLogin
@@ -56,6 +62,7 @@ const SignIn: React.FC = () => {
                 callback={responseFacebook}
                 icon="fa-facebook"
                 cssClass="facebook-login-button"
+                textButton={t('loginWithFacebook')}
             />
         </div>
     );

@@ -19,14 +19,14 @@ function FAQ() {
                             className="flex justify-between items-center w-full p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 ease-in-out"
                             onClick={() => toggleAccordion(index)}
                         >
-                            <span className="font-semibold text-gray-700">This is the title {index + 1}</span>
+                            <span className="font-semibold text-gray-700">Donec ultricies ante non mollis sollicitudin. {index + 1}</span>
                             <span className="text-gray-500 text-lg">{isOpen ? '−' : '+'}</span>
                         </button>
                         <div className={`transition-all duration-500 ease-in-out ${
                             isOpen ? 'max-h-40 p-3' : 'max-h-0'
                         } overflow-hidden bg-gray-50 rounded-lg`}>
                             <p className='text-gray-600'>
-                                This is the answer for section {index + 1}
+                            Sed cursus turpis at velit porttitor imperdiet {index + 1}
                             </p>
                         </div>
                     </div>

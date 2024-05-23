@@ -5,28 +5,30 @@ import InfoSection from '@/components/InfoSection';
 import Footer from '@/components/Footer';
 import CookiesConsent from '@/components/CookiesConsent';
 
-
-const About: React.FC = () => (
+import { useTranslations } from 'next-intl';
+const About: React.FC = () => {
+    const t = useTranslations();  
+    return(
     <Layout>
         <Header />
         <div className="about-container">
             <InfoSection
                 imageSrc="/images/ourstory.jpg"
-                title="Our Story"
-                content="Discover the journey of Coffee Magic as we bring you the finest coffee beans sourced from around the world. Our passion for quality coffee drives us to seek out the best and most unique flavors for our customers."
+                title={t('ourStory')}
+                content={t('ourStoryContent')}
                 imageRight={false}
             />
             <InfoSection
                 imageSrc="/images/ourteam.png"
-                title="Meet Our Team"
-                content="Our team of coffee enthusiasts works tirelessly to ensure you receive only the best products. From our roasters to our customer service staff, meet the people who make it all happen."
+                title={t('meetOurTeam')}
+                content={t('meetOurTeamContent')}
                 imageRight={true}
             />
         </div>
         <Footer/>
         <CookiesConsent/>
     </Layout>
-);
+)};
 
 export default About;
 export async function getStaticProps(context: { locale: any; }) {

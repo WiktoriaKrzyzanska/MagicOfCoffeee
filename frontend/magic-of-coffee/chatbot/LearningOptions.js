@@ -1,30 +1,31 @@
 import React from 'react';
 import './LearningOptions.css'
-
+import { useTranslations } from 'next-intl';
 const LearningOptions = (props) => {
+  const t = useTranslations();
   const options = [
     {
-      text: "Infolinia number",
+      text: t('infoliniaNumber'),
       handler: props.actionProvider.handleInfolinia, 
       id: 1,
     },
     {
-      text:"Ways to pay for shipment",
+      text:t('waysToPayForShipment'),
       handler: props.actionProvider.handleShipment, 
       id: 2,
     },
     {
-      text:"Realization time",
+      text:t('realizationTime'),
       handler: props.actionProvider.handleRealization, 
       id: 3,
     },
     {
-      text:"Avaiable carriers",
+      text:t('availableCarriers'),
       handler: props.actionProvider.handleCarriers, 
       id: 4,
     },
     {
-      text:"Return policy",
+      text:t('returnPolicy'),
       handler: props.actionProvider.handlePolicy, 
       id: 5,
     },

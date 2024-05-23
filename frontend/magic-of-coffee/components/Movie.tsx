@@ -1,6 +1,7 @@
 import React from 'react';
 import './Movie.css';
 import { useTranslations } from 'next-intl';
+import { Button } from '@mui/material';
 const Movie = () => {
     const t = useTranslations();  
     return (
@@ -12,8 +13,8 @@ const Movie = () => {
             <div className="video-content">
                 <h1>{t('welcm')}</h1>
                 <p>{t('welcm2')}</p>
-                <button className="button" id="buy-button">{t('buy')}</button>
-                <button className="button" id="about-us-button">{t('about')}</button>
+                <Button className="button" component="a" href="/products" id="buy-button">{t('buy')}</Button>
+                <Button className="button" component="a" href="/about" id="about-us-button">{t('about')}</Button>
             </div>
         </div>
     )
