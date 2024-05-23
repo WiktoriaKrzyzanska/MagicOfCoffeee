@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
     background: #29190e;
     color: #613d2b; 
   }
@@ -12,6 +14,7 @@
     padding: 5rem;
     background: rgb(255, 255, 255);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
   }
   
   .contact-details h2, .contact-form h2 {
