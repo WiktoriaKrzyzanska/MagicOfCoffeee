@@ -140,7 +140,19 @@
   "cardType": "Card type:",
   "cardHolder": "Card holder:",
   "cardNumber": "Card number:",
-  "expiryDate": "Expiry date:"
+  "expiryDate": "Expiry date:",
+
+  "infoliniaNumber": "Infolinia number",
+  "waysToPayForShipment": "Ways to pay for shipment",
+  "realizationTime": "Realization time",
+  "availableCarriers": "Available carriers",
+  "returnPolicy": "Return policy",
+  "infoliniaMessage": "+48 (0) 123 456 Monday to Friday from 09:00 to 17:00 CET Saturday from 10:00 to 18:00 CET",
+  "shipmentMessage": "You can pay online by BLIK, other online payments and in cash",
+  "realizationMessage": "We ship the order usually the following day counting from the day the order was paid for. Orders made before 13:00 are sent the same day.",
+  "carriersMessage": "Our shippers are DPD, Inpost, FedEX and Poczta Polska",
+  "policyMessage": "You can return the product within 30 days",
+  "followUpMessage": "Is there something else I can help with?"
 
 }
   

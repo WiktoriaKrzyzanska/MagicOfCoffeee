@@ -139,7 +139,20 @@
   "cardType": "Typ karty:",
   "cardHolder": "Właściciel karty:",
   "cardNumber": "Numer karty:",
-  "expiryDate": "Data ważności:"
+  "expiryDate": "Data ważności:",
+
+  "infoliniaNumber": "Numer infolinii",
+  "waysToPayForShipment": "Sposoby płatności za wysyłkę",
+  "realizationTime": "Czas realizacji",
+  "availableCarriers": "Dostępni przewoźnicy",
+  "returnPolicy": "Polityka zwrotów",
+
+  "infoliniaMessage": "+48 (0) 123 456 Poniedziałek - Piątek od 09:00 do 17:00 CET Sobota od 10:00 do 18:00 CET",
+  "shipmentMessage": "Możesz zapłacić online przez BLIK, inne płatności online i gotówką",
+  "realizationMessage": "Zamówienie wysyłamy zazwyczaj następnego dnia licząc od dnia, w którym zamówienie zostało opłacone. Zamówienia złożone przed 13:00 są wysyłane tego samego dnia.",
+  "carriersMessage": "Nasi przewoźnicy to DPD, Inpost, FedEX i Poczta Polska",
+  "policyMessage": "Możesz zwrócić produkt w ciągu 30 dni",
+  "followUpMessage": "Czy mogę w czymś jeszcze pomóc?"
 
   
   }
