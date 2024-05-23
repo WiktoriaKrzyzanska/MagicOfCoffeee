@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../components/Contact.css'
 import './signup.css'
+import axios from 'axios';
 
 const SignUp: React.FC = () => {
     const [action, setAction] = useState("Sign Up");
@@ -69,7 +70,23 @@ const SignUp: React.FC = () => {
             }
         }
     }, [password, confirmPassword]);
-
+    const handleSignUp = async () => {
+        try {
+            const userData = {
+                name: name,
+                lastName: lastName,
+                email: email,
+                password: password,
+                phoneNumber: phoneNumber
+            };
+    
+            const response = await axios.post('http://localhost:8080/api/signup', userData);
+            console.log('Signup success:', response.data);
+        } catch (error) {
+            console.error('Signup failed:', error);
+        }
+    }
+    
     return (
         <div className='container'>
                 <div className="box">
@@ -118,8 +135,9 @@ const SignUp: React.FC = () => {
                     <label htmlFor="terms">I agree to the Terms and Conditions</label>
                 </div>
                 <div className="submit-container">
-                    <div className="submit">Sign Up</div>
-                </div>
+    <button className="submit" onClick={handleSignUp}>Sign Up</button>
+</div>
+
             </div>
     );
 }
