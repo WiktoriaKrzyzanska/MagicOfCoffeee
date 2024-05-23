@@ -42,7 +42,7 @@ const Header: React.FC = () => {
             <div className="auth">
                 {isAuthenticated ? (
                     <>
-                        <Link href="/cart" className="auth-link">
+                        <Link href="/checkout" className="auth-link">
                             <ShoppingBasketIcon style={{ color: 'inherit', fontSize: 'large' }} />
                         </Link>
                         <button onClick={handleLogout} className="auth-link">{t('logout')}</button>

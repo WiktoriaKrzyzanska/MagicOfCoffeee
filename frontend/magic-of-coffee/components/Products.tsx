@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslations } from 'next-intl';
+
 interface Product {
   id: number;
   name: string;
@@ -11,12 +12,20 @@ interface Product {
   countryOfOrigin: string;
   levelOfBitterness: number;
   taste: string;
-  imageBase64?: string;  
+  imageBase64?: string;
+}
+
+interface CartItemDto {
+  userId: number;
+  productId: number;
+  quantity: number;
 }
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
-  const t = useTranslations();  
+  const [userId, setUserId] = useState<number | null>(null); 
+  const t = useTranslations();
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -27,8 +36,53 @@ export default function Products() {
       }
     };
 
+    const fetchUserId = async () => {
+      const token = localStorage.getItem('token'); 
+      if (!token) {
+        console.error('No token found');
+        return;
+      }
+
+      try {
+        const response = await axios.get<number>('http://localhost:8082/user/id', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setUserId(response.data);
+      } catch (error) {
+        console.error('Failed to fetch user ID:', error);
+      }
+    };
+
     fetchProducts();
+    fetchUserId();
   }, []);
+
+  const addToCart = async (productId: number) => {
+    if (userId === null) {
+      console.error('User ID not found');
+      return;
+    }
+
+    const token = localStorage.getItem('token'); 
+    const cartItem: CartItemDto = {
+      userId,
+      productId,
+      quantity: 1,
+    };
+
+    try {
+      await axios.post('http://localhost:8082/coffee/cart/add', cartItem, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      alert('Product added to cart successfully!');
+    } catch (error) {
+      console.error('Failed to add product to cart:', error);
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -67,6 +121,12 @@ export default function Products() {
                   <p className="text-sm">{t('taste')}: {product.taste}</p>
                 </div>
                 <p className="text-sm font-medium text-gray-900">{t('price')}: ${product.price}</p>
+                <button
+                  className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                  onClick={() => addToCart(product.id)}
+                >
+                  {t('buy')}
+                </button>
               </div>
             </div>
           ))}

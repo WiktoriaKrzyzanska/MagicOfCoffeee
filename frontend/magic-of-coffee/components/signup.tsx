@@ -91,6 +91,10 @@ const SignUp: React.FC = () => {
                     phoneNumber
                 });
                 console.log('Signup success:', response.data);
+
+                const token = response.data.token;
+                localStorage.setItem('token', token);
+
                 router.push('/login'); 
             } catch (error) {
                 console.error('Signup failed:', error);
