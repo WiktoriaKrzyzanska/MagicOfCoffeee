@@ -10,7 +10,7 @@
 
 .PricingApp {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     font-family: "Montserrat", sans-serif;
     font-weight: var(--primary-fw);
     font-size: var(--primary-fs);

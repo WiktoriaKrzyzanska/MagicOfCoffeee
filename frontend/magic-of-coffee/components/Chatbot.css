@@ -10,11 +10,11 @@
   
   .chatbot-container {
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     right: 20px;
-    width: 350px;
     height: 500px;
     border: 1px solid #ccc;
+    border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
@@ -23,7 +23,8 @@
   }
   
   .chatbot-header {
+    display: flex;
+    justify-content: flex-end;
     background-color: #f1f1f1; 
-    border-bottom: 1px solid #ccc;
   }
   

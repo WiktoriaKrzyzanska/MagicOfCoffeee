@@ -21,11 +21,13 @@ const Page: React.FC = () => {
         <Hero 
         title={t('indextitle1')}
         description={t('indexdes1')}
+        imageSrc="/images/coffee-bean-1.jpg"
       />
      <MainBanner />
       <Hero 
         title={t('indextitle2')}
         description={t('indexdes2')}
+        imageSrc="/images/coffee-bean.jpg"
       />
         <Chatbot/>
         <Newsletter/>

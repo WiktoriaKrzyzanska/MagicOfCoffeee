@@ -4,8 +4,6 @@ import Header from "@/components/Header";
 import '../components/Contact.css'
 import Footer from '@/components/Footer';
 import CookiesConsent from '@/components/CookiesConsent';
-import PrivacyNotice from '@/components/PrivacyNotice';
-import Help from '@/components/Help';
 import PricingFeature from '@/components/PriceFeature';
 
 const HelpPage: React.FC = () => (

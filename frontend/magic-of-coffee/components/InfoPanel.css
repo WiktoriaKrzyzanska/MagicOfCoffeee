@@ -3,7 +3,6 @@
     color: #fff;
     font-family: 'Arial', sans-serif; 
     padding: 20px;
-    border-radius: 8px;
     height: 100%;
   }
   
@@ -36,7 +35,6 @@
   border: 2px dashed #f9d342; 
   height: 100%;
   background-color: black;
-  border-radius: 10px; 
 }
 
 .select-country:hover {
