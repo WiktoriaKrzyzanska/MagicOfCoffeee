@@ -6,14 +6,13 @@
   
 .learning-option-button {
     padding: 0.5rem;
-    border-radius: 25px;
     border: 1px solid;
-    margin: 3px;
+    margin: 2px;
     background-color: #f8b400; 
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     color: white;
-    font-size: 16px;             
+    font-size: 14px;             
     cursor: pointer;
     transition: background-color 0.3s;
 }
