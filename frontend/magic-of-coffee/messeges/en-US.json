@@ -152,7 +152,9 @@
   "realizationMessage": "We ship the order usually the following day counting from the day the order was paid for. Orders made before 13:00 are sent the same day.",
   "carriersMessage": "Our shippers are DPD, Inpost, FedEX and Poczta Polska",
   "policyMessage": "You can return the product within 30 days",
-  "followUpMessage": "Is there something else I can help with?"
+  "followUpMessage": "Is there something else I can help with?",
+
+  "botGreeting": "Hi, I'm a HelpDesk bot. What can I help you with?"
 
 }
   

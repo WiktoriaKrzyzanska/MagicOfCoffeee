@@ -152,7 +152,8 @@
   "realizationMessage": "Zamówienie wysyłamy zazwyczaj następnego dnia licząc od dnia, w którym zamówienie zostało opłacone. Zamówienia złożone przed 13:00 są wysyłane tego samego dnia.",
   "carriersMessage": "Nasi przewoźnicy to DPD, Inpost, FedEX i Poczta Polska",
   "policyMessage": "Możesz zwrócić produkt w ciągu 30 dni",
-  "followUpMessage": "Czy mogę w czymś jeszcze pomóc?"
+  "followUpMessage": "Czy mogę w czymś jeszcze pomóc?",
+  "botGreeting": "Cześć, jestem botem HelpDesk. W czym mogę pomóc?"
 
   
   }
