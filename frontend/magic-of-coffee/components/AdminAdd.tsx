@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
+import './AdminAdd.css'
 
 type FormData = {
     name: string;
@@ -88,86 +89,88 @@ function AdminAdd() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-            />
-            <input
-                type="text"
-                name="description"
-                placeholder="Description"
-                value={formData.description}
-                onChange={handleChange}
-                required
-            />
-            <input
-                type="number"
-                step="0.01"
-                name="price"
-                placeholder="Price"
-                value={formData.price}
-                onChange={handleChange}
-                required
-            />
-            <label>
-                Availability:
+        <div className="container">
+            <form className="admin-form" onSubmit={handleSubmit}>
                 <input
-                    type="checkbox"
-                    name="availability"
-                    checked={formData.availability}
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    type="number"
+                    step="0.01"
+                    name="price"
+                    placeholder="Price"
+                    value={formData.price}
+                    onChange={handleChange}
+                    required
+                />
+                <label>
+                    Availability:
+                    <input
+                        type="checkbox"
+                        name="availability"
+                        checked={formData.availability}
+                        onChange={handleChange}
+                    />
+                </label>
+                <input
+                    type="number"
+                    step="0.1"
+                    name="rating"
+                    placeholder="Rating"
+                    value={formData.rating}
                     onChange={handleChange}
                 />
-            </label>
-            <input
-                type="number"
-                step="0.1"
-                name="rating"
-                placeholder="Rating"
-                value={formData.rating}
-                onChange={handleChange}
-            />
-            <input
-                type="text"
-                name="countryOfOrigin"
-                placeholder="Country of Origin"
-                value={formData.countryOfOrigin}
-                onChange={handleChange}
-            />
-            <input
-                type="number"
-                name="levelOfBitterness"
-                placeholder="Level of Bitterness"
-                value={formData.levelOfBitterness}
-                onChange={handleChange}
-            />
-            <input
-                type="text"
-                name="taste"
-                placeholder="Taste"
-                value={formData.taste}
-                onChange={handleChange}
-            />
-            <input
-                type="number"
-                name="quantity"
-                placeholder="Quantity"
-                value={formData.quantity}
-                onChange={handleChange}
-                required
-            />
-            <input
-                type="file"
-                name="image"
-                onChange={handleChange}
-                accept="image/*"
-            />
-            <button type="submit">Add Product</button>
-        </form>
+                <input
+                    type="text"
+                    name="countryOfOrigin"
+                    placeholder="Country of Origin"
+                    value={formData.countryOfOrigin}
+                    onChange={handleChange}
+                />
+                <input
+                    type="number"
+                    name="levelOfBitterness"
+                    placeholder="Level of Bitterness"
+                    value={formData.levelOfBitterness}
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    name="taste"
+                    placeholder="Taste"
+                    value={formData.taste}
+                    onChange={handleChange}
+                />
+                <input
+                    type="number"
+                    name="quantity"
+                    placeholder="Quantity"
+                    value={formData.quantity}
+                    onChange={handleChange}
+                    required
+                />
+                <input
+                    type="file"
+                    name="image"
+                    onChange={handleChange}
+                    accept="image/*"
+                />
+                <button type="submit">Add Product</button>
+            </form>
+        </div>
     );
 }
 

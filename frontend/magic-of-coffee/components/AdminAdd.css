@@ -1,0 +1,33 @@
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    margin: auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 100px;
+    padding: 30px;
+    border: 1px solid #f8b400;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="checkbox"] {
+    margin: 10px;
+    color: #f8b400;
+    background-color: #f8b400;
+  }
+
+  button {
+    border-radius: 10px;
+  }
