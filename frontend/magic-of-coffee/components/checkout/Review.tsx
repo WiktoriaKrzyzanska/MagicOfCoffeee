@@ -7,29 +7,31 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
+import { useTranslations } from 'next-intl';
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
-const payments = [
-  { name: 'Card type:', detail: 'Visa' },
-  { name: 'Card holder:', detail: 'Mr. John Smith' },
-  { name: 'Card number:', detail: 'xxxx-xxxx-xxxx-1234' },
-  { name: 'Expiry date:', detail: '04/2024' },
-];
+
 
 export default function Review() {
+  const t = useTranslations();
+  const payments = [
+    { name: t('cardType'), detail: 'Visa' },
+    { name: t('cardHolder'), detail: 'Mr. John Smith' },
+    { name: t('cardNumber'), detail: 'xxxx-xxxx-xxxx-1234' },
+    { name: t('expiryDate'), detail: '04/2024' },
+  ];
   return (
     <Stack spacing={2}>
       <List disablePadding>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Products" secondary="4 selected" />
+          <ListItemText primary={t('products')} secondary="4 selected" />
           <Typography variant="body2">$134.98</Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Shipping" secondary="Plus taxes" />
+          <ListItemText primary={t('shipping')} secondary={t('plusTaxes')} />
           <Typography variant="body2">$9.99</Typography>
         </ListItem>
         <ListItem sx={{ py: 1, px: 0 }}>
-          <ListItemText primary="Total" />
+          <ListItemText primary={t('total')}/>
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
             $144.97
           </Typography>
@@ -44,7 +46,7 @@ export default function Review() {
       >
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Shipment details
+          {t('shipmentDetails')}
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography color="text.secondary" gutterBottom>
@@ -53,7 +55,7 @@ export default function Review() {
         </div>
         <div>
           <Typography variant="subtitle2" gutterBottom>
-            Payment details
+          {t('paymentDetails')}
           </Typography>
           <Grid container>
             {payments.map((payment) => (

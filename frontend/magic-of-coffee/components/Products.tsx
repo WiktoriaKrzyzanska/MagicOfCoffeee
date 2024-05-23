@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { useTranslations } from 'next-intl';
 interface Product {
   id: number;
   name: string;
@@ -16,7 +16,7 @@ interface Product {
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
-
+  const t = useTranslations();  
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -60,13 +60,13 @@ export default function Products() {
                   <p className="text-sm text-gray-500">{product.description}</p>
                 </div>
                 <div>
-                  <p className="text-sm">{product.availability ? 'Available' : 'Unavailable'}</p>
-                  <p className="text-sm">Rating: {product.rating} / 5</p>
-                  <p className="text-sm">Origin: {product.countryOfOrigin}</p>
-                  <p className="text-sm">Bitterness: {product.levelOfBitterness} / 10</p>
-                  <p className="text-sm">Taste: {product.taste}</p>
+                  <p className="text-sm">{product.availability ? t('available') : t('unavailable')}</p>
+                  <p className="text-sm">{t('rating')}: {product.rating} / 5</p>
+                  <p className="text-sm">{t('origin')}: {product.countryOfOrigin}</p>
+                  <p className="text-sm">{t('bitterness')}: {product.levelOfBitterness} / 10</p>
+                  <p className="text-sm">{t('taste')}: {product.taste}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">Price: ${product.price}</p>
+                <p className="text-sm font-medium text-gray-900">{t('price')}: ${product.price}</p>
               </div>
             </div>
           ))}

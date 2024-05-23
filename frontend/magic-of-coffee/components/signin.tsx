@@ -2,8 +2,9 @@ import React from 'react';
 import '../components/Contact.css';
 import './signup.css';
 import FacebookLogin from 'react-facebook-login';
-
+import { useTranslations } from 'next-intl';
 const SignIn: React.FC = () => {
+    const t = useTranslations();  
     const responseFacebook = (response:any) => {
         console.log(response);
     }
@@ -11,18 +12,18 @@ const SignIn: React.FC = () => {
     return (
         <div className='container'>
             <div className="box">
-                <div className="text">Login</div>
+                <div className="text">{t('log in')}</div>
                 <div className="underline"></div>
             </div>
             <form>
                 <div className="inputs2">
                     <div className="input">
                         <img src="/images/email.png" alt="Email Icon" />
-                        <input placeholder="E-mail" type="email" />
+                        <input placeholder={t('email')} type="email" />
                     </div>
                     <div className="input">
                         <img src="/images/padlock.png" alt="Padlock Icon" />
-                        <input placeholder="Password" type="password" />
+                        <input placeholder={t('password')} type="password" />
                     </div>
                 </div>
             </form>
@@ -34,10 +35,11 @@ const SignIn: React.FC = () => {
     callback={responseFacebook}
     icon="fa-facebook"
     cssClass="facebook-login-button"
+    textButton={t('loginWithFacebook')}
 />
 
             <div className="submit-container">
-                <div className="submit">Sign in</div>
+                <div className="submit">{t('signin')}</div>
             </div>
             
         </div>

@@ -4,14 +4,14 @@ import Header from "@/components/Header";
 import '../components/Contact.css'
 import Footer from '@/components/Footer';
 import CookiesConsent from '@/components/CookiesConsent';
-
+import { useTranslations } from 'next-intl';
 const ContactUs: React.FC = () => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [subject, setSubject] = useState<string>('');
     const [message, setMessage] = useState<string>('');
     const [status, setStatus] = useState<string>('');
-
+    const t = useTranslations();  
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -26,13 +26,13 @@ const ContactUs: React.FC = () => {
         const data = await res.json();
 
         if (res.status === 200) {
-            setStatus('Email sent successfully!');
+            setStatus(t('emailSent'));
             setName('');
             setEmail('');
             setSubject('');
             setMessage('');
         } else {
-            setStatus('Error sending email: ' + data.error);
+            setStatus(t('emailError') + data.error);
         }
     };
 
@@ -41,44 +41,44 @@ const ContactUs: React.FC = () => {
             <Header />
             <div className="contact-us-container">
                 <div className="contact-details">
-                    <h2>Contact Information</h2>
+                    <h2>{t('contactInformation')}</h2>
                     <ul>
-                        <li> Call Us: +48 444 333 222</li>
-                        <li> Location: ul. Olszynkowa 74, Racibórz 47-406, Poland</li>
-                        <li> Business Hours: Mon – Fri: 9 AM – 5 PM, Sat – Sun: Closed</li>
+                        <li> {t('callUs')}</li>
+                        <li> {t('location')}</li>
+                        <li> {t('businessHours')}</li>
                     </ul>
                 </div>
                 <div className="contact-form">
-                    <h2>Contact Us</h2>
+                    <h2>{t('contactUs')}</h2>
                     <form onSubmit={handleSubmit}>
                         <input
                             type="text"
-                            placeholder="Enter your name"
+                            placeholder={t('enterName')}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
                         />
                         <input
                             type="email"
-                            placeholder="Enter your email address"
+                            placeholder={t('enterEmail')}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                         <input
                             type="text"
-                            placeholder="Enter the subject"
+                            placeholder={t('enterSubject')}
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                             required
                         />
                         <textarea
-                            placeholder="Your message"
+                            placeholder={t('yourMessage')}
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             required
                         ></textarea>
-                        <button type="submit">Submit</button>
+                        <button type="submit">{t('submit')}</button>
                     </form>
                     {status && <p>{status}</p>}
                 </div>

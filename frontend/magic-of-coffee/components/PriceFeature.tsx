@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import PricingCard from './PricingCard';
 import './PriceFeature.css'
-
+import { useTranslations } from 'next-intl';
 const Pricing = () => {
   const [selectMonthly, setSelectMonthly] = useState(true);
-
+  const t = useTranslations(); 
   return (
     <div className="PricingApp">
       <div className="app-container">
         <header>
-          <h1 className="header-topic">Our Pricing Plan</h1>
+          <h1 className="header-topic">{t('pricingPlan')}</h1>
           <div className="header-row">
-            <p>Annually</p>
+            <p>{t('annually')}</p>
             <label className="price-switch">
               <input
                 type="checkbox"
@@ -20,12 +20,12 @@ const Pricing = () => {
               />
               <div className="switch-slider"></div>
             </label>
-            <p>Monthly</p>
+            <p>{t('monthly')}</p>
           </div>
         </header>
         <div className="pricing-cards">
           <PricingCard
-            title="Essential"
+            title={t('essential')}
             price={selectMonthly ? "20.99$" : "188.9$"}
             countries="60"
             shipments="5"

@@ -5,7 +5,7 @@ import CreditCardRoundedIcon from '@mui/icons-material/CreditCardRounded';
 import AccountBalanceRoundedIcon from '@mui/icons-material/AccountBalanceRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import { styled } from '@mui/system';
-
+import { useTranslations } from 'next-intl';
 const FormGrid = styled('div')(() => ({
   display: 'flex',
   flexDirection: 'column',
@@ -39,13 +39,14 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
 
     }
   };
-
+  const t = useTranslations();
   return (
+    
     <form onSubmit={handleSubmit}>
       <Stack spacing={{ xs: 3, sm: 6 }} useFlexGap>
         <FormControl component="fieldset" fullWidth>
           <RadioGroup
-            aria-label="Payment options"
+            aria-label={t('paymentOptions')}
             name="paymentType"
             value={paymentType}
             onChange={handlePaymentTypeChange}
@@ -69,7 +70,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
               <CardActionArea onClick={() => setPaymentType('creditCard')}>
                 <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <CreditCardRoundedIcon color="primary" fontSize="small" />
-                  <Typography fontWeight="medium">Card</Typography>
+                  <Typography fontWeight="medium">{t('card')}</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -88,7 +89,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
               <CardActionArea onClick={() => setPaymentType('bankTransfer')}>
                 <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <AccountBalanceRoundedIcon color="primary" fontSize="small" />
-                  <Typography fontWeight="medium">Bank account</Typography>
+                  <Typography fontWeight="medium">{t('bankAccount')}</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -118,7 +119,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
               }}
             >
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="subtitle2">Credit card</Typography>
+                <Typography variant="subtitle2">{t('creditCard')}</Typography>
                 <CreditCardRoundedIcon sx={{ color: 'text.secondary' }} />
               </Box>
               <Box sx={{ margin: '20px 0' }}>
@@ -127,10 +128,10 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
             </Box>
             <FormControlLabel
               control={<Checkbox name="saveCard" />}
-              label="Remember credit card details for next time"
+              label={t('rememberCardDetails')}
             />
             <Button type="submit" variant="contained" disabled={!stripe || !elements}>
-              Pay
+            {t('pay')}
             </Button>
           </Box>
         )}
@@ -143,13 +144,13 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
             }}
           >
             <Alert severity="warning" icon={<WarningRoundedIcon />}>
-              Your order will be processed once we receive the funds.
+            {t('bankTransferWarning')}
             </Alert>
             <Typography variant="subtitle1" fontWeight="medium">
-              Bank account
+            {t('bankAccountLabel')}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Please transfer the payment to the bank account details shown below.
+            {t('bankTransferInstruction')}
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <Typography variant="body1" color="text.secondary">
@@ -161,7 +162,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
             </Box>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <Typography variant="body1" color="text.secondary">
-                Account number:
+              {t('accountNumber')}:
               </Typography>
               <Typography variant="body1" fontWeight="medium">
                 123456789
@@ -169,7 +170,7 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ onNextStep }) => {
             </Box>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <Typography variant="body1" color="text.secondary">
-                Routing number:
+              {t('routingNumber')}:
               </Typography>
               <Typography variant="body1" fontWeight="medium">
                 987654321
