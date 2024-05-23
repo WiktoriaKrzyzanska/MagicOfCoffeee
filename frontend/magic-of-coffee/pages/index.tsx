@@ -10,6 +10,8 @@ import Chatbot from '@/components/Chatbot';
 import Hero from '@/components/Hero';
 import Movie from '@/components/Movie';
 import { useTranslations } from 'next-intl';
+import coffeeBeans from '../public/images/coffee-bean.jpg';
+import coffeeBeansOne from '../public/images/coffee-bean-1.jpg';
 const Page: React.FC = () => {
   const t = useTranslations();  
   return (
@@ -21,11 +23,13 @@ const Page: React.FC = () => {
         <Hero 
         title={t('indextitle1')}
         description={t('indexdes1')}
+        imageSrc={coffeeBeans}
       />
      <MainBanner />
       <Hero 
         title={t('indextitle2')}
         description={t('indexdes2')}
+        imageSrc={coffeeBeansOne}
       />
         <Chatbot/>
         <Newsletter/>

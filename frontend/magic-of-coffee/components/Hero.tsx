@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import coffeeBeans from '../public/images/coffee-bean.jpg'; 
+import Image, { StaticImageData } from 'next/image'
 import { useTranslations } from 'next-intl';
 interface HeroProps {
   title: string;
   description: string;
+  imageSrc: StaticImageData;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, description }) => {
+const Hero: React.FC<HeroProps> = ({ title, description, imageSrc }) => {
   const t = useTranslations();  
   return (
    <>
@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ title, description }) => {
           </div>
         </div>
         <div className="flex-1 mt-8 lg:mt-0">
-          <Image src={coffeeBeans} alt="Coffee Beans" width={500} height={300} />
+          <Image src={imageSrc} alt="Coffee Beans" width={500} height={300} />
         </div>
       </div>
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
