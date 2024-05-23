@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, imageSrc }) => {
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-amber-300 to-amber-500 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" ></div>
       </div>
-      <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56 flex flex-wrap items-center justify-between">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-32 sm:py-48 lg:py-56 flex flex-wrap items-center justify-between">
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{title}</h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, imageSrc }) => {
           </div>
         </div>
         <div className="flex-1 mt-8 lg:mt-0">
-          <Image src={imageSrc} alt="Coffee Beans" width={500} height={300} />
+          <Image src={imageSrc} alt="Coffee Beans" width={600} height={300} />
         </div>
       </div>
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
