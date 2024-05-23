@@ -10,14 +10,11 @@ import AddressForm from './AddressForm';
 import getCheckoutTheme from './getCheckoutTheme';
 import Info from './Info';
 import InfoMobile from './InfoMobile';
-import Review from './Review';
 import ToggleColorMode from './ToggleColorMode';
 import PaymentForm from './PaymentForm';
 import './Checkout.css';
 import { useTranslations } from 'next-intl';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
-
-
 
 const logoStyle = {
   width: '140px',
@@ -32,8 +29,6 @@ function getStepContent(step: number, handleNextStep: () => void) {
       return <AddressForm />;
     case 1:
       return <PaymentForm onNextStep={handleNextStep} />;
-    case 2:
-      return <Review />;
     default:
       throw new Error('Unknown step');
   }
@@ -46,7 +41,7 @@ export default function Checkout() {
   const defaultTheme = createTheme({ palette: { mode } });
   const [activeStep, setActiveStep] = React.useState(0);
   const t = useTranslations();
-  const steps = [t('shippingAddress'), t('paymentDetails'), t('reviewYourOrder')];
+  const steps = [t('shippingAddress'), t('paymentDetails')];
   
   const toggleColorMode = () => {
     setMode((prev: PaletteMode) => (prev === 'dark' ? 'light' : 'dark'));
